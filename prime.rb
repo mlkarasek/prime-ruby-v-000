@@ -1,5 +1,10 @@
 
-def prime_numbers(prime_numbers)
-  prime_numbers.find do |num|
-    num.non_prime_numbers?
+def prime?(n)
+return false if n < 2
+return true if n == 3 || n == 2
+  if (2...n-1).any?{|i| n % i == 0}   
+    false
+  else
+    true
   end
+end
